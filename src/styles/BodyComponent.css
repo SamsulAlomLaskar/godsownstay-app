@@ -1,0 +1,68 @@
+#firstDiv {
+    background: #0194FE;
+  }
+ 
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  svg path {
+    fill: #0194FE;
+  }
+  
+  svg rect {
+    fill: white;
+  }
+  
+  .container {
+    --divider-height: 9rem;
+    
+    position: relative;
+    top: calc( var(--divider-height)/4 * -1 );
+  
+    height: var(--divider-height);
+    width: 100%;
+      /* alternatively, could get rid of the rect, and move the svg container further down */
+  
+    float: left; 
+    z-index: 1;
+    
+    /* outline: 1px solid red; */
+  }
+  
+  
+  /** Cosmetics **/
+  * {
+    margin: 0;
+  }
+  #firstDiv {
+    padding: .5rem;
+  };
+
+
+ #standard-basic [label] {
+    font-size: 10px;
+ }
+  /* #waveDiv {
+    font-family: monospace;
+    font-size: 1.2rem;
+    line-height: 1.2;
+  } */
+
+  
+/*
+  svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 30%;
+    vertical-align: middle;
+    overflow: hidden;
+  } */

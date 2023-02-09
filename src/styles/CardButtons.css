@@ -1,0 +1,38 @@
+.cardButton {
+  display: flex;
+  width: 1rem;
+  margin-left: 0.3rem;
+  padding: 1px;
+}
+
+.count {
+  font-size: 20px;
+  font-weight: 500;
+  margin: auto;
+  margin-left: 0.6rem;
+}
+
+.btnClr {
+  scale: 90%;
+  background-color: #f9f9f9;
+  color: #fcfcfc;
+  border: 1px solid rgb(234, 233, 233);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btnClr:hover {
+  /* color: #490909; */
+  background-color: #f4f4f1;
+}
+.ageButton:hover {
+  color: #fff !important;
+  background: #1675df !important;
+}
+
+#leftBtn {
+  margin-left: 0.8rem;
+}
+
+#rightBtn {
+  margin-left: 0.7rem;
+}
