@@ -6,10 +6,9 @@ import DateComponent from "../atoms/DateComponent";
 import PersonAddAltSharpIcon from "@mui/icons-material/PersonAddAltSharp";
 import KeyboardArrowDownSharpIcon from "@mui/icons-material/KeyboardArrowDownSharp";
 import KeyboardArrowUpSharpIcon from "@mui/icons-material/KeyboardArrowUpSharp";
-import { red } from "@mui/material/colors";
-import "../../styles/BodyComponent.css";
 import CardComponent from "../atoms/CardComponent";
 import AnitmationComponent from "../molecule/AnitmationComponent";
+import "../../styles/BodyComponent.css";
 
 export const BodyComponent = () => {
   const [value, setValue] = useState("");

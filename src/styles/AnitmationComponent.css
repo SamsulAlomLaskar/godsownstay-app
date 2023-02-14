@@ -26,7 +26,7 @@
 }
 
 .time {
-  top: 1088px;
+  top: 1188px;
   left: 1722px;
   width: 137px;
   height: 133px;
@@ -37,13 +37,46 @@
   opacity: 1;
 }
 .timeLabel {
-  /* top: 1222px; */
+  /* top: -1222px; */
+  margin-top: -4rem;
   left: 1610px;
   width: 90px;
   height: 60px;
   text-align: center;
-  font: normal normal normal 20px/5px Roboto;
+  font: normal normal normal 20px/1px Roboto;
   letter-spacing: 0px;
   color: #4a4a4a;
   opacity: 1;
+}
+
+.dealsAnim {
+  top: 1084px;
+  left: 210px;
+  width: 514px;
+  height: 232px;
+  /* UI Properties */
+  opacity: 1;
+}
+
+#svgg {
+  transform: rotate(90deg);
+  /* top: rem; */
+  left: 15%;
+  top: -10%;
+  width: 12rem;
+  height: 12rem;
+  /* transform: matrix(0, 1, -1, 0, 0, 0); */
+  opacity: 1;
+  position: relative;
+  z-index: -10;
+}
+#svgg::before {
+  content: "";
+  background: #fff;
+  height: 70px;
+  width: 80px;
+  position: absolute;
+  top: 110px;
+  border-radius: 50px;
+  z-index: 500;
 }

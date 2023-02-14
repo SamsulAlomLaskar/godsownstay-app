@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import logo from "../organism/mainlogoGodsownstay1.png";
+import logo from "../organism/logo.png";
 
 const navItems = [
   "📞 24x7 gosCare Support",
@@ -58,7 +58,7 @@ function HeaderComponent() {
                 textDecoration: "none",
               }}
             >
-              <img style={{ width: "300px", height: "50px" }} src={logo} />
+              <img style={{ width: "250px", height: "50px" }} src={logo} />
             </Typography>
           </Box>
           <Typography
@@ -77,7 +77,7 @@ function HeaderComponent() {
               textDecoration: "none",
             }}
           >
-            <img style={{ width: "300px", height: "50px" }} src={logo} />
+            <img style={{ width: "250px", height: "50px" }} src={logo} />
           </Typography>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Box

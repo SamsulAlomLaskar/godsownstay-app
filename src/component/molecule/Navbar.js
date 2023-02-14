@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { styled } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import { Button, Icon, IconButton } from "@mui/material";
+import { Button } from "@mui/material";
 import "../../styles/Navbar.css";
 // import { Image } from "@mui/icons-material";
 import img1 from "../molecule/assets/mask-group-41/img1.png";
@@ -11,6 +10,7 @@ import img2 from "../molecule/assets/mask-group-42/img2.png";
 import img3 from "../molecule/assets/mask-group-43/img3.png";
 import img4 from "../molecule/assets/fishing.png";
 import locationImg from "../molecule/assets/web-1920/locImg1.png";
+import anim from "../molecule/assets/77365.json";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-start",
@@ -23,6 +23,27 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     minHeight: 128,
   },
 }));
+
+const ltp = () => {
+  return (
+    <Box>
+      <lottie-player
+        src={JSON.stringify(anim)}
+        background="transparent"
+        speed="1"
+        style={{
+          width: "55px",
+          height: "55px",
+          position: "absolute",
+          bottom: "39px",
+          left: "16px",
+        }}
+        loop
+        autoplay
+      ></lottie-player>
+    </Box>
+  );
+};
 
 const menuItems = [
   {
@@ -44,8 +65,12 @@ const menuItems = [
 ];
 const userLocations = [
   {
+    name: "by",
+    // img: loc(),
+  },
+  {
     name: "Near by",
-    img: locationImg,
+    // img: loc(),
   },
   {
     name: "Kochi",
@@ -94,7 +119,6 @@ export default function Navbar() {
   const [locations, setLocations] = useState(userLocations);
   return (
     <Box sx={{ flexGrow: 1 }}>
-      {/* <AppBar position="static"> */}
       <StyledToolbar>
         <Box
           margin={"auto"}
@@ -111,7 +135,6 @@ export default function Navbar() {
               <Box
                 sx={{
                   backgroundColor: "white",
-                  //   width: "60px",
                   height: "65px",
                   borderRadius: ".2rem",
                   justifyContent: "space-between",
@@ -120,7 +143,6 @@ export default function Navbar() {
                 id="ind"
               >
                 <Button sx={{ width: "30px" }}>
-                  {/* <img src="src\assets\Mask_Group_41\Mask Group 41.png"></img> */}
                   <img
                     alt="y"
                     src={val.img}
@@ -144,15 +166,6 @@ export default function Navbar() {
             );
           })}
         </Box>
-        {/* <Box
-          sx={{
-            // display: "flex",
-            position: "relative",
-            right: "10%",
-            // left: "85vw",
-            //   height: "10vh",
-          }}
-        > */}
         <Button
           variant="outlined"
           sx={{
@@ -171,6 +184,14 @@ export default function Navbar() {
         </Button>
       </StyledToolbar>
       <StyledToolbar>
+        {/* <lottie-player
+          src={JSON.stringify(anim)}
+          background="transparent"
+          speed="1"
+          style={{ width: "120px", height: "120px" }}
+          loop
+          autoplay
+        ></lottie-player> */}
         <Box
           margin={"auto"}
           id="BOOXX"
@@ -184,33 +205,40 @@ export default function Navbar() {
         >
           {locations.map((val, ind) => {
             return (
-              <Box
-                className="card"
-                sx={{
-                  backgroundColor: "white",
-                  width: "70px",
-                  height: "70px",
-                  borderRadius: "2.2rem",
-                  justifyContent: "space-between",
-                  marginRight: "3.6rem",
-                }}
-                id="ind"
-              >
-                <p
-                  style={{
-                    textDecoration: "none",
-                    fontSize: "12px",
-                    color: "white",
-                    textTransform: "none",
-                    textAlign: "justify",
-                    marginLeft: "16px",
-                    position: "absolute",
-                    marginTop: "4.5rem",
-                  }}
-                >
-                  {val.name}
-                </p>
-              </Box>
+              <div>
+                {val.name === "by" ? (
+                  ltp()
+                ) : (
+                  <Box
+                    className="card"
+                    sx={{
+                      backgroundColor: "white",
+                      width: "70px",
+                      height: "70px",
+                      borderRadius: "2.2rem",
+                      justifyContent: "space-between",
+                      marginRight: "3.6rem",
+                    }}
+                    id="ind"
+                  >
+                    {/* <img src={val/>}/> */}
+                    <p
+                      style={{
+                        textDecoration: "none",
+                        fontSize: "12px",
+                        color: "white",
+                        textTransform: "none",
+                        textAlign: "justify",
+                        marginLeft: "16px",
+                        position: "absolute",
+                        marginTop: "4.5rem",
+                      }}
+                    >
+                      {val.name}
+                    </p>
+                  </Box>
+                )}
+              </div>
             );
           })}
         </Box>
