@@ -10,7 +10,7 @@ export default function AnitmationComponent() {
   const [minute, setMinute] = useState(0);
   const [second, setSecond] = useState(0);
 
-  let deadline = new Date("feb 15, 2023 00:00:00").getTime();
+  let deadline = new Date("feb 16, 2023 00:00:00").getTime();
   let days, hours, minutes, seconds;
   let mF = Math.floor;
 
